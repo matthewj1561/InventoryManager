@@ -10,6 +10,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 
 @Service
+// Creates database connection
 public class FirebaseInitialize {
 
     @PostConstruct

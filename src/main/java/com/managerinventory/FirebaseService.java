@@ -14,12 +14,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FirebaseService {
+    // Function that saves an item's values
     public static String saveItem(Map<String, Object> items) throws InterruptedException, ExecutionException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("Items").document("items").set(items);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
+    // Function that loads all values
     public static DocumentSnapshot loadItem() throws InterruptedException, ExecutionException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         DocumentReference docRef = dbFirestore.collection("Items").document("items");
@@ -28,7 +30,7 @@ public class FirebaseService {
         // ...
         // future.get() blocks on response
         DocumentSnapshot document = future.get();
-    
+
         return document;
     }
 }

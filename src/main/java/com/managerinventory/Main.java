@@ -12,11 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
-
-import com.google.cloud.firestore.DocumentSnapshot;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.HashMap;
